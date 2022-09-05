@@ -4,9 +4,8 @@ import { Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-main',
   template: `
-    <p>
-      main works!
-    </p>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <button class="btn btn-blue">Button</button>
   `,
   styles: [
   ]
