@@ -5,7 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "dev:ssr": "ng run AlgoBacktesterFrontend:serve-ssr",
+    "serve:ssr": "node dist/AlgoBacktesterFrontend/server/main.js",
+    "build:ssr": "ng build && ng run AlgoBacktesterFrontend:server",
+    "prerender": "ng run AlgoBacktesterFrontend:prerender"
   },
   "private": true,
   "dependencies": {
@@ -16,8 +20,10 @@
     "@angular/forms": "^14.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
+    "@angular/platform-server": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "bootstrap": "^5.2.0",
+    "@nguniversal/express-engine": "^14.1.0",
+    "express": "^4.15.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -26,6 +32,12 @@
     "@angular-devkit/build-angular": "^14.2.1",
     "@angular/cli": "~14.2.1",
     "@angular/compiler-cli": "^14.0.0",
+    "@nguniversal/builders": "^14.1.0",
+    "@types/express": "^4.17.0",
+    "@types/node": "^14.15.0",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
     "typescript": "~4.7.2"
   }
 }

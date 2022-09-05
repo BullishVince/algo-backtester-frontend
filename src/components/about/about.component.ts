@@ -2,24 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-about',
   template: `
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <button class="btn btn-blue">Button</button>
+    <p>
+      about works!
+    </p>
   `,
   styles: [
   ]
 })
-export class MainComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Algo Backtester - Home');
+    this.title.setTitle('Algo Backtester - About Us');
 
     this.meta.addTag({
       name: 'description',
-      content: 'Backtest trading strategies for free'
+      content: 'Contact Information'
     })
   }
 
